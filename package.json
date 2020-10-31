@@ -4,6 +4,10 @@
   "description": "google material card behaviors",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build:dev": "webpack",
+    "build:watch": "webpack --watch"
+  },
   "dependencies": {
     "css-loader": "^5.0.0",
     "mini-css-extract-plugin": "^1.2.1",
