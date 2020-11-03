@@ -32,6 +32,11 @@ $spacingunit: 8;
   &:hover {
     opacity: 1;
     clip-path: circle(200% at var(--mouse-x, 0) var(--mouse-y, 0));
+
+    .card-header:after {
+      opacity: 1;
+      clip-path: circle(150% at var(--mouse-x, 0) var(--mouse-y, 0));
+    }
   }
 
 }
