@@ -5,12 +5,12 @@ $grey95: hsl(0, 0%, 95%);
 $white: hsl(0, 0%, 100%);
 $navy: #2c436d;
 $darknavy: #343633;
-$easingstandard: cubic-bezier(0.165,  0.84, 0.44, 1);
+$easingstandard: cubic-bezier(0.165, 0.84, 0.44, 1);
 $durationshortest: 150ms;
 $durationshorter: 200ms;
 $durationshort: 250ms;
 $durationstandard: 300ms;
-$durationlong: 400m;
+$durationlong: 400ms;
 $spacingunit: 8;
 
 @function spacing($i) {
@@ -65,8 +65,8 @@ $spacingunit: 8;
 
 .card-category {
   color: $grey50;
-  font-size: spacing(2);
-  line-height: spacing(4);
+  font-size: spacing(2) * 1px;
+  line-height: spacing(4) * 1px;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -148,6 +148,24 @@ $spacingunit: 8;
   text-transform: uppercase;
   font-weight: bold;
 }
+
+
+.responsive-media {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%; // Default to square
+  text-align: left; // Video in centered text can mis-align
+  // Ensure images fill placeholder
+  & > img {
+    width: 100%;
+  }
+}
+
+.responsive-media--widescreen {
+  padding-bottom: ((9 / 16) * 100%);
+}
+
 // Base styles
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
